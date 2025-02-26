@@ -1,0 +1,13 @@
+<section class="px-2 py-2">
+    <h1 class="text-3xl text-center py-3">Total: {{brawlers.length}} brawlers</h1>
+    <div class="grid grid-cols-8 justify-center items-center">
+        @for (brawler of brawlers; track $index) {
+            <a href="/{{brawler.id}}">
+                <div class="relative w-[150px] h-auto mt-1 mx-auto">
+                    <img src="{{brawler.imageUrl}}" alt="" class="w-full">
+                    <p translate="no" class="absolute bottom-1.5 left-2.5 text-lg">{{brawler.name}}</p>
+                </div>
+            </a>
+        }
+    </div>
+</section>
